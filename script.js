@@ -53,7 +53,8 @@ search.addEventListener("click", () => { //เก็บค่า
   cnt(length.value);   // เคลียค่า
 });
 reset.addEventListener("click", () => { //เก็บค่า
-  length.value = "5";   // เคลียค่า
+  length.value = "5";
+  color.value = yellow ; // เคลียค่า
 });
 
 // more codes for Search and Reset buttons here
