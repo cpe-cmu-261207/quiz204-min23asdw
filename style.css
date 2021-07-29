@@ -4,3 +4,6 @@ body {
   color: black;
   text-align: center;
 }
+
+.text {   visibility: hidden; }
+.todo-hidden:hover .hidden {   visibility: visible; }
