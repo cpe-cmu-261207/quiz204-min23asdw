@@ -8,17 +8,42 @@ const color = document.querySelector('#color')
 
 btn_toggle.onclick = () => {
   // your code here
-
-    ('.main-diff .blue-bg .arc_arrow').click(function () {
         //Hide others
-        $('.main-diff .blue-bg .arc_arrow').not(this).removeClass('arc_arrow--displayed');
-        $('.main-diff .blue-bg .arc_arrow').not(this).parent().next('.matchfooter').removeClass('matchfooter--displayed');
+        ('toggle').not(this).removeClass('text');
+        ('toggle').not(this).parent().next('text').removeClass('text');
 
-        $(this).addClass('arc_arrow--displayed');
-        $(this).parent().next('.matchfooter').addClass('matchfooter--displayed');
-    });
+        (this).addClass('text');
+        (this).parent().next('.text').addClass('text');
 
 
+
+}
+
+function cnt(){
+     let str = document.getElementById('text')
+     const myArr = str.split(" ");
+     var paragraphs = document.getElementById("text");
+     var count = 0;
+     for(var i = 0; i < paragraphs.length; i++)
+     {
+         count += paragraphs[i].innerHTML.split(' ').length;
+     }
+     for(var j = 0; j < count; j++)
+     {
+         if(myArr[i].length >= length){
+         highlight(myArr[i]);
+         };
+     }
+}
+
+function highlight(text) {
+  var inputText = document.getElementById("text");
+  var innerHTML = inputText.innerHTML;
+  var index = innerHTML.indexOf(text);
+  if (index >= 0) {
+   innerHTML = innerHTML.substring(0,index) + "<span class='highlight'>" + innerHTML.substring(index,index+text.length) + "</span>" + innerHTML.substring(index + text.length);
+   inputText.innerHTML = innerHTML;
+  }
 }
 
 // more codes for Search and Reset buttons here

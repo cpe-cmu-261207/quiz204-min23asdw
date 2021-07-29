@@ -7,3 +7,7 @@ body {
 
 .text {   visibility: hidden; }
 .todo-hidden:hover .hidden {   visibility: visible; }
+
+.highlight {
+  background-color: yellow;
+}
