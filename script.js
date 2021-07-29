@@ -3,6 +3,7 @@ const calculation = document.querySelector("#calculation")
 const btn_toggle = document.querySelector("#toggle");
 const length = document.getElementById('length')
 const color = document.querySelector('#color')
+const reset = document.getElementById('reset')
 
 // define more constants and variables here
 
@@ -45,5 +46,9 @@ function highlight(text) {
    inputText.innerHTML = innerHTML;
   }
 }
+
+reset.addEventListener("click", () => { //เก็บค่า
+  length.value = "5";   // เคลียค่า
+});
 
 // more codes for Search and Reset buttons here
