@@ -5,6 +5,8 @@ const length = document.getElementById('length')
 const color = document.querySelector('#color')
 const reset = document.getElementById('reset')
 
+const search = document.getElementById('search')
+
 // define more constants and variables here
 
 btn_toggle.onclick = () => {
@@ -20,7 +22,7 @@ btn_toggle.onclick = () => {
 
 }
 
-function cnt(){
+function cnt(le){
      let str = document.getElementById('text')
      const myArr = str.split(" ");
      var paragraphs = document.getElementById("text");
@@ -31,7 +33,7 @@ function cnt(){
      }
      for(var j = 0; j < count; j++)
      {
-         if(myArr[i].length >= length){
+         if(myArr[i].length >= le){
          highlight(myArr[i]);
          };
      }
@@ -47,6 +49,9 @@ function highlight(text) {
   }
 }
 
+search.addEventListener("click", () => { //เก็บค่า
+  cnt(length.value);   // เคลียค่า
+});
 reset.addEventListener("click", () => { //เก็บค่า
   length.value = "5";   // เคลียค่า
 });
